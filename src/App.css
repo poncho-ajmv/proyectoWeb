@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.movie-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.poster-container {
+  margin-right: 40px;
+}
+
+.poster {
+  max-width: 300px; /* Tamaño del póster */
+}
+
+.trailer-container {
+  margin-bottom: 40px;
+}
+
+.trailer {
+  width: 800px; /* Ancho del video */
+  height: 450px; /* Altura del video */
+}
+
+.prev-btn,
+.next-btn {
+  margin-top: 20px;
+  font-size: 18px; /* Tamaño de fuente de los botones */
+  padding: 10px 20px; /* Espacio alrededor del texto de los botones */
+}
