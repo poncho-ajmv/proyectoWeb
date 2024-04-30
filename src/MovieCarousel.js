@@ -1,4 +1,3 @@
-// MovieCarousel.js
 import React, { useState } from "react";
 import movies from "./moviesData";
 
@@ -37,14 +36,6 @@ const MovieCarousel = () => {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
                     ></iframe>
-                </div>
-                <div className="people-involved">
-                    <h3>People Involved</h3>
-                    <ul>
-                        {currentMovie.people.map((person, index) => (
-                            <li key={index}>{person}</li>
-                        ))}
-                    </ul>
                 </div>
             </div>
             <div className="navigation-buttons">
