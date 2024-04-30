@@ -1,4 +1,4 @@
-//mociesData.js
+//moviesData.js
 
 const extractYoutubeId = (url) => {
     const regExp =
@@ -7,16 +7,16 @@ const extractYoutubeId = (url) => {
     return match && match[1].length === 11 ? match[1] : null;
 };
 
-const apiKey = "674684d28cd5c404ad1bf06cd1a5d482";
+const TMDBapiKey = "674684d28cd5c404ad1bf06cd1a5d482"; //https://www.themoviedb.org/settings/api
 
 const getMovieDetails = async (movie) => {
-    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
+    const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDBapiKey}&query=${encodeURIComponent(
         movie.title
     )}`;
     const response = await fetch(apiUrl);
     const data = await response.json();
     if (data.results.length > 0) {
-        const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${data.results[0].id}?api_key=${apiKey}&append_to_response=credits,reviews`;
+        const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${data.results[0].id}?api_key=${TMDBapiKey}&append_to_response=credits,reviews`;
         const detailsResponse = await fetch(movieDetailsUrl);
         const detailsData = await detailsResponse.json();
         movie.poster = `https://image.tmdb.org/t/p/w500${data.results[0].poster_path}`;
@@ -31,6 +31,7 @@ const getMovieDetails = async (movie) => {
                 name: actor.name,
                 character: actor.character,
             }));
+        movie.people = movie.cast.map((actor) => actor.name); // Extracting people involved
         // Assuming reviews are available and you want to take the first review
         if (detailsData.reviews && detailsData.reviews.results.length > 0) {
             movie.review = detailsData.reviews.results[0].content;
