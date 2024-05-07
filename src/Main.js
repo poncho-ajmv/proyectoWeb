@@ -10,7 +10,6 @@ function Main({ movies }) {
                 <MovieCard /> {/* Incluye el componente MovieCard aquí */}
                 <MovieCarousel />
                 <MovieList movies={movies} />
-               
             </>
         </main>
     );
