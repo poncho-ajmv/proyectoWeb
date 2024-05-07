@@ -19,7 +19,7 @@ function MovieDetails() {
         if (selectedSaga && selectedCategory) {
             return (
                 moviesBySagaAndCategory[selectedSaga]?.[selectedCategory] || []
-            );8
+            );
         } else if (selectedSaga) {
             return Object.values(
                 moviesBySagaAndCategory[selectedSaga] || {}

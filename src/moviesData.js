@@ -6,7 +6,7 @@ const extractYoutubeId = (url) => {
 };
 
 const fetchTrailerFromYouTube = async (movieTitle) => {
-    const apiKey = "AIzaSyBLupWD0SCsx2RtoMUhMA2HirmJ4jjxgH4";
+    const apiKey = "AIzaSyBLupWDOSCsx2RtoMUhMA2HirmJ4jjxgH4";
     const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
         movieTitle + " trailer" // Agregar la palabra clave "tráiler"
     )}&type=video&key=${apiKey}`;
