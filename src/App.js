@@ -16,7 +16,6 @@ function App() {
         // Aquí puedes implementar la lógica para buscar películas
         console.log("Buscando películas con el query:", query);
     };
-    
 
     return (
         <div className="App">

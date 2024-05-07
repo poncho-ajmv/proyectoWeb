@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { moviesBySagaAndCategory } from "./moviesData";
 
 
+
 function MovieDetails() {
+    
     const [selectedSaga, setSelectedSaga] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -40,8 +42,6 @@ function MovieDetails() {
         .flatMap((saga) => Object.keys(saga))
         .filter((category, index, self) => self.indexOf(category) === index);
 
-
-        
     return (
         <div className="movie-details">
             <div className="selectors">
@@ -76,19 +76,19 @@ function MovieDetails() {
                     </select>
                 </div>
                 <div className="poster-list">
-                {getFilteredMovies().map((movie) => (
-                    <img
-                        key={movie.title}
-                        src={movie.poster}
-                        alt={movie.title}
-                    />
-                ))}
+                    {getFilteredMovies().map((movie) => (
+                        <div key={movie.title} className="movie-poster">
+                            <img
+                                key={movie.title}
+                                src={movie.poster}
+                                alt={movie.title}
+                            />
+                            <p>Rating: {movie.rating}</p>
+                            <p>Description: {movie.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-
-            
-            
         </div>
     );
 }
