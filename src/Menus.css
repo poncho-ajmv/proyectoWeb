@@ -1,0 +1,198 @@
+/* Menu.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente la barra de navegación */
+    background-color: #333; /* Color de fondo para la barra de navegación */
+    padding: 10px 0; /* Añade un poco de espacio alrededor de la barra de navegación */
+}
+
+.logo {
+    width: 120px; /* ajusta el ancho de la imagen */
+    height: auto; /* mantiene la relación de aspecto */
+    margin-right: 20px; /* Espacio entre la imagen y la barra de navegación */
+}
+
+nav {
+    margin-right: auto; /* Barra de navegación ocupa todo el espacio restante */
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #0ef;
+}
+
+nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Menu.css */
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: rgb(204, 204, 204);
+    font-size: 1.1em;
+    color: rgb(41, 31, 31);
+    transition: border-color 0.3s ease;
+    margin-top: 20px; /* Añade espacio arriba de la barra de búsqueda */
+}
+
+/* Estilo cuando se enfoca la barra de búsqueda */
+.search-bar:focus {
+    border-color: #0ef;
+}
+
+/* Estilo para el botón de búsqueda */
+.search-button {
+    background-color: rgb(45, 100, 104);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando se pasa el mouse sobre el botón de búsqueda */
+.search-button:hover {
+    background-color: #0bd;
+}
+
+/* Estilo cuando se pasa el mouse sobre el botón de búsqueda */
+.search-button:hover {
+    background-color: #0bd;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(156, 156, 156);
+    list-style: none;
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(243, 236, 236, 0.2);
+}
+
+.dropdown ul li {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+    background: #f0f0f0;
+}
+
+.menu nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu nav a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff; /* Cambia el color del texto a blanco */
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: 0.5s;
+}
+
+.menu nav a:not(:last-child) {
+    margin-right: 20px; /* Ajusta el espacio entre elementos, excepto para el último elemento */
+}
+
+.menu nav a:hover {
+    color: #0ef;
+}
+
+.menu nav a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu nav a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Agregar estilos para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Añade espacio arriba del contenedor de búsqueda */
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: rgb(204, 204, 204);
+    font-size: 1.1em;
+    color: rgb(41, 31, 31);
+    transition: border-color 0.3s ease;
+    margin-right: 10px; /* Ajusta el margen derecha para dejar espacio entre la barra y el botón */
+    height: 100%; /* Ajustamos la altura para que sea igual a la del botón */
+    box-sizing: border-box; /* Aseguramos que el padding no afecte la altura */
+}
+
+/* Estilo para el botón de búsqueda */
+.search-button {
+    background-color: rgb(45, 100, 104);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Ajustamos la altura para que sea igual a la de la barra */
+}
