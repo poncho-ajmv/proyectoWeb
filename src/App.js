@@ -359,27 +359,8 @@ const renderFavorites = () => (
                                             {movie.title}
                                         </h1>
                                         <p className="text-white">
-                                        Un père idéal
-Un père idéal
-
-Rating: 5.966
-Battle Over Britain
-Battle Over Britain
-
-Rating: 6.534
-The Last Kumite
-The Last Kumite
-
-Rating: 5.2
-Furiosa: A Mad Max Saga
-Furiosa: A Mad Max Saga
-
-Rating: 7.628
-The Garfield Movie
-The Garfield Movie
-
-Rating: 6.5
-Favorites                      </p>
+                                            {movie.overview}
+                                        </p>
                                     </div>
                                 </div>
                             )}
